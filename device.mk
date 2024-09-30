@@ -1,4 +1,3 @@
-
 #
 # Copyright (C) 2024 The Android Open Source Project
 # Copyright (C) 2024 SebaUbuntu's TWRP device tree generator
@@ -25,6 +24,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_STATIC_BOOT_CONTROL_HAL := \
     bootctrl.diana \
     libgptutils \
+    libz \
     libcutils
 
 PRODUCT_PACKAGES += \
