@@ -20,6 +20,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     bootctrl.diana
+    bootctrl.diana.vendorboot
 
 PRODUCT_STATIC_BOOT_CONTROL_HAL := \
     bootctrl.diana \
