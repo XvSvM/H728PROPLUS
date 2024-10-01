@@ -19,10 +19,10 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-service
 
 PRODUCT_PACKAGES += \
-    bootctrl.saturn
+    bootctrl.diana
 
 PRODUCT_STATIC_BOOT_CONTROL_HAL := \
-    bootctrl.saturn \
+    bootctrl.diana \
     libgptutils \
     libz \
     libcutils
