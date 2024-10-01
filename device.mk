@@ -20,9 +20,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     bootctrl.diana \
-    libgptutils \
-    libz \
-    libcutils
+    bootctrl.diana.recovery
 
 PRODUCT_PACKAGES += \
     otapreopt_script \
