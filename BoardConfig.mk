@@ -9,7 +9,6 @@ DEVICE_PATH := device/askey/adt3
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
-BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 # A/B
 AB_OTA_UPDATER := true
@@ -42,6 +41,7 @@ OVERRIDE_TARGET_FLATTEN_APEX := true
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := exdroid
 TARGET_NO_BOOTLOADER := true
+TARGET_NO_KERNEL := true
 
 # Display
 TARGET_SCREEN_DENSITY := 240
