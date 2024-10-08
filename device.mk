@@ -20,8 +20,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     bootctrl.diana \
-    bootctrl.diana.recovery
-
+   
 PRODUCT_PACKAGES += \
     otapreopt_script \
     cppreopts.sh \
