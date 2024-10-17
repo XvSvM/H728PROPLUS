@@ -6,6 +6,10 @@
 #
 
 DEVICE_PATH := device/askey/adt3
+SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/recovery/root
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/recovery/root
+PRODUCT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/recovery/root
+PRODUCT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/recovery/root
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
