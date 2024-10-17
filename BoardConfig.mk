@@ -109,6 +109,7 @@ BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 # TWRP specific build flags
 RECOVERY_SDCARD_ON_DATA := true
+TW_THEME := portrait_hdpi
 TW_NO_SCREEN_BLANK := true
 #TW_SCREEN_BLANK_ON_BOOT := true
 TW_INCLUDE_NTFS_3G := true
