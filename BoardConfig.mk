@@ -6,6 +6,10 @@
 #
 
 DEVICE_PATH := device/askey/adt3
+SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += device/askey/adt3/systemext/public
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += device/askey/adt3/systemext/private
+PRODUCT_PUBLIC_SEPOLICY_DIRS += device/askey/adt3/product/public
+PRODUCT_PRIVATE_SEPOLICY_DIRS += device/askey/adt3/product/private
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
