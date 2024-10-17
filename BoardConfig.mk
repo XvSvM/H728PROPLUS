@@ -108,24 +108,43 @@ PLATFORM_SECURITY_PATCH := 2099-12-31
 VENDOR_SECURITY_PATCH := 2099-12-31
 PLATFORM_VERSION := 16.1.0
 
-# TWRP Configuration
-TW_DEVICE_VERSION := X96Q PRO PLUS
-TW_THEME := portrait_hdpi
-TW_DEFAULT_BRIGHTNESS := 255
-TW_CUSTOM_CPU_TEMP_PATH := "/sys/devices/virtual/thermal/thermal_zone50/temp"
-TW_HAS_DOWNLOAD_MODE := true
-TW_BACKUP_EXCLUSIONS := /data/fonts
-TW_EXTRA_LANGUAGES := true
-TW_EXCLUDE_DEFAULT_USB_INIT := true
-TW_INCLUDE_CRYPTO := true
+# TWRP specific build flags
+RECOVERY_SDCARD_ON_DATA := true
+TW_NO_SCREEN_BLANK := true
+#TW_SCREEN_BLANK_ON_BOOT := true
 TW_INCLUDE_NTFS_3G := true
-TW_INCLUDE_LIBRESETPROP := true
-TW_INCLUDE_RESETPROP := true
-TWRP_EVENT_LOGGING := true
+TW_USE_TOOLBOX := true
+TW_EXTRA_LANGUAGES := false
+#TW_DEFAULT_LANGUAGE := ru
+TW_EXCLUDE_DEFAULT_USB_INIT := true
+TARGET_USES_MKE2FS := true
+TW_EXCLUDE_APEX := true
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
-TARGET_USES_LOGD := true
-TW_SCREEN_BLANK_ON_BOOT := true
+TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
+TW_MAX_BRIGHTNESS := 2047
+TW_DEFAULT_BRIGHTNESS := 1200
 TW_INPUT_BLACKLIST := "hbtp_vm"
-TW_USE_TOOLBOX := true
 TW_INCLUDE_REPACKTOOLS := true
+TW_INCLUDE_LIBRESETPROP :=true
+TW_INCLUDE_RESETPROP := true
+TW_BACKUP_EXCLUSIONS := /data/fonts
+#TW_NO_FASTBOOT_BOOT := true
+TW_INCLUDE_LPTOOLS := true
+TW_INCLUDE_LPDUMP := true
+#TW_INCLUDE_PYTHON := true
+
+# Decryption
+TW_INCLUDE_CRYPTO := true
+TW_INCLUDE_CRYPTO_FBE := true
+TW_INCLUDE_FBE_METADATA_DECRYPT := true
+
+TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster4.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster41.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libpuresoftkeymasterdevice.so
+
+TW_LOAD_VENDOR_MODULES := "novatek_ts_truly_fw.bin \
+                           novatek_ts_truly_mp.bin \
+                           focaltech_ts_fw_boe.bin \
+                           ICNL9916.bin"
