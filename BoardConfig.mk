@@ -120,12 +120,6 @@ BOARD_USES_MTK_HARDWARE := true
 # Platform
 TARGET_BOARD_PLATFORM := diana
 
-# Properties
-TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
-
-# Resolution
-TARGET_SCREEN_HEIGHT := 2712
-TARGET_SCREEN_WIDTH := 1220
 
 # Recovery
 TARGET_NO_RECOVERY := true
