@@ -10,24 +10,6 @@ DEVICE_PATH := device/askey/adt3
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
 
-# A/B
-AB_OTA_UPDATER := true
-AB_OTA_PARTITIONS += \
-    product \
-    vendor_dlkm \
-    system_dlkm \
-    vendor \
-    system
-BOARD_USES_RECOVERY_AS_BOOT := true
-
-# Architecture
-TARGET_ARCH := arm64
-TARGET_ARCH_VARIANT := armv8-a
-TARGET_CPU_ABI := arm64-v8a
-TARGET_CPU_ABI2 := 
-TARGET_CPU_VARIANT := generic
-TARGET_CPU_VARIANT_RUNTIME := generic
-
 TARGET_2ND_ARCH := arm
 TARGET_2ND_ARCH_VARIANT := armv7-a-neon
 TARGET_2ND_CPU_ABI := armeabi-v7a
@@ -37,10 +19,6 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := generic
 
 # APEX
 OVERRIDE_TARGET_FLATTEN_APEX := true
-
-# Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := exdroid
-TARGET_NO_BOOTLOADER := true
 
 # Display
 TARGET_SCREEN_DENSITY := 240
@@ -86,17 +64,9 @@ BOARD_ASKEY_DYNAMIC_PARTITIONS_SIZE := 9122611200 # TODO: Fix hardcoded value
 # Platform
 TARGET_BOARD_PLATFORM := diana
 
-# Recovery
-TARGET_RECOVERY_PIXEL_FORMAT := ARGB_8888
-TARGET_USERIMAGES_USE_EXT4 := true
-TARGET_USERIMAGES_USE_F2FS := true
-
 # Security patch level
 VENDOR_SECURITY_PATCH := 2021-08-01
 
-# Verified Boot
-BOARD_AVB_ENABLE := true
-BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
 
 # Hack: prevent anti rollback
 PLATFORM_SECURITY_PATCH := 2099-12-31
