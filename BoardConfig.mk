@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := DEVICE_PATH := device/askey/adt3
+DEVICE_PATH := device/askey/adt3
 
 # Architecture
 TARGET_ARCH := arm64
