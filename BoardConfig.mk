@@ -31,6 +31,16 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := generic
 
+# A/B
+AB_OTA_UPDATER := true
+AB_OTA_PARTITIONS += \
+    product \
+    vendor_dlkm \
+    system_dlkm \
+    vendor \
+    system
+BOARD_USES_RECOVERY_AS_BOOT := true
+
 # Power
 ENABLE_CPUSETS := true
 ENABLE_SCHEDBOOST := true
