@@ -35,9 +35,6 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := generic
 ENABLE_CPUSETS := true
 ENABLE_SCHEDBOOST := true
 
-# Assertation
-TARGET_OTA_ASSERT_DEVICE := aristotle
-
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := exdroid
 TARGET_NO_BOOTLOADER := true
