@@ -105,10 +105,6 @@ BOARD_SUPER_PARTITION_GROUPS := askey_dynamic_partitions
 BOARD_ASKEY_DYNAMIC_PARTITIONS_PARTITION_LIST := system system system_dlkm vendor vendor_dlkm product
 BOARD_ASKEY_DYNAMIC_PARTITIONS_SIZE := 9122611200 # TODO: Fix hardcoded value
 
-BOARD_PARTITION_LIST := $(call to-upper, $(BOARD_MAIN_PARTITION_LIST))
-$(foreach p, $(BOARD_PARTITION_LIST), $(eval BOARD_$(p)IMAGE_FILE_SYSTEM_TYPE := erofs))
-$(foreach p, $(BOARD_PARTITION_LIST), $(eval TARGET_COPY_OUT_$(p) := $(call to-lower, $(p))))
-
 BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
@@ -145,9 +141,6 @@ TW_LOAD_VENDOR_BOOT_MODULES := true
 # Verified Boot
 BOARD_AVB_ENABLE := true
 
-# Init
-TARGET_INIT_VENDOR_LIB := libinit_aristotle
-TARGET_RECOVERY_DEVICE_MODULES := libinit_aristotle
 
 # TWRP Configurations
 TW_THEME := portrait_hdpi
