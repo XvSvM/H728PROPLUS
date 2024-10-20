@@ -7,6 +7,7 @@
 
 LOCAL_PATH := device/askey/adt3
 # A/B
+AB_OTA_PARTITIONS += recovery
 AB_OTA_UPDATER := true
 ENABLE_VIRTUAL_AB := true
 TARGET_ENFORCE_AB_OTA_PARTITION_LIST := true
