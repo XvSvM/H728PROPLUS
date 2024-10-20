@@ -40,3 +40,7 @@ PRODUCT_PACKAGES += \
     update_engine \
     update_verifier \
     update_engine_sideload
+
+PRODUCT_PACKAGES += \
+    linker.vendor_ramdisk \
+    shell_and_utilities_vendor_ramdisk \
