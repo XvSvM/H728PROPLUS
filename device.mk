@@ -45,3 +45,16 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     linker.vendor_ramdisk \
     shell_and_utilities_vendor_ramdisk \
+
+PRODUCT_PACKAGES += \
+    linker.recovery \
+    shell_and_utilities_recovery \
+
+PRODUCT_PACKAGES += adbd.recovery
+
+PRODUCT_PACKAGES += \
+    linker.vendor_ramdisk \
+    resize2fs.vendor_ramdisk \
+    tune2fs.vendor_ramdisk \
+
+
