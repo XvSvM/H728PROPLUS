@@ -7,10 +7,7 @@
 
 LOCAL_PATH := device/askey/adt3
 # A/B
-<<<<<<< HEAD
-=======
 AB_OTA_PARTITIONS += recovery
->>>>>>> 643bb42843cdc382711e87e542c7aae8388445ba
 AB_OTA_UPDATER := true
 ENABLE_VIRTUAL_AB := true
 TARGET_ENFORCE_AB_OTA_PARTITION_LIST := true
@@ -31,10 +28,6 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-impl \
     android.hardware.boot@1.0-service
 $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
-
-# Dynamic
-PRODUCT_USE_DYNAMIC_PARTITIONS := true
-
 
 # Dynamic
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
