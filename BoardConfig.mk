@@ -87,6 +87,7 @@ BOARD_BOOT_HEADER_VERSION := 4
 BOARD_DTB_SIZE := 176040
 BOARD_DTB_OFFSET :=  0x03288000
 BOARD_HEADER_SIZE := 2128
+BOARD_INCLUDE__DTB_IN_BOOTIMG := true
 BOARD_KERNEL_CMDLINE := loop.max_part=4 mmcblk.perdev_minors=16 firmware_class.path=/vendor/etc/firmware bootconfig
 
 BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)
