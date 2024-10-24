@@ -7,6 +7,10 @@
 
 LOCAL_PATH := device/askey/adt3
 # A/B
+<<<<<<< HEAD
+=======
+AB_OTA_PARTITIONS += recovery
+>>>>>>> 643bb42843cdc382711e87e542c7aae8388445ba
 AB_OTA_UPDATER := true
 ENABLE_VIRTUAL_AB := true
 TARGET_ENFORCE_AB_OTA_PARTITION_LIST := true
@@ -26,6 +30,11 @@ AB_OTA_POSTINSTALL_CONFIG += \
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-impl \
     android.hardware.boot@1.0-service
+$(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
+
+# Dynamic
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
 
 # Dynamic
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -40,3 +49,21 @@ PRODUCT_PACKAGES += \
     update_engine \
     update_verifier \
     update_engine_sideload
+
+PRODUCT_PACKAGES += \
+    linker.vendor_ramdisk \
+    shell_and_utilities_vendor_ramdisk \
+
+PRODUCT_PACKAGES += adbd.recovery
+
+PRODUCT_PACKAGES += \
+    linker.vendor_ramdisk \
+    resize2fs.vendor_ramdisk \
+    tune2fs.vendor_ramdisk \
+
+PRODUCT_PACKAGES += adbd.vendor_ramdisk
+
+PRODUCT_PACKAGES += \
+    linker.recovery \
+    shell_and_utilities_recovery \
+    adbd.recovery
